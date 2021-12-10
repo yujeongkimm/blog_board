@@ -7,4 +7,4 @@ primary key(boardId)
 );
 
 INSERT INTO tbl_board(title, content, name) VALUES
-('타이틀2', '컨텐트', '네임')
+('title3', 'content3', 'name3')

@@ -12,4 +12,16 @@
         *
         FROM tbl_board;
     </select>
+
+    <select id="getBoard" parameterType="Long" resultType="com.example.blog_board.domain.Board">
+        SELECT
+        *
+        FROM tbl_board where boardId=#{boardId};
+    </select>
+
+    <insert id="uploadBoard" parameterType="com.example.blog_board.domain.Board">
+        INSERT INTO tbl_board (title,content,name)
+        VALUES
+        (#{title}, #{content}, #{name});
+    </insert>
 </mapper>

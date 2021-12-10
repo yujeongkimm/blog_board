@@ -4,6 +4,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//https://tjdans.tistory.com/9?category=992472
+
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.blog_board")
 public class BlogBoardApplication {
