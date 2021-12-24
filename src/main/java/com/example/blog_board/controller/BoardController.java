@@ -4,9 +4,7 @@ import com.example.blog_board.domain.Board;
 import com.example.blog_board.service.BoardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -55,5 +53,16 @@ public class BoardController {
         return "redirect:/board/main";
     }
 
+    @PutMapping("/update")
+    public String updateBoard(Board board){
+        service.updateBoard(board);
+        return "redirect:/board/main";
+    }
+
+    @DeleteMapping("/delete")
+    public String deleteBoard(Long boardId) {
+        service.deleteBoard(boardId);
+        return "redirect:/board/main";
+    }
 
 }
